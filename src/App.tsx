@@ -20,6 +20,9 @@ import {
 } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import logo from "/CMXConnectIbadanLogo.webp"
+import logo2 from "/CMXConnectIbadanLogo2.webp"
+import shirt from "/CMXSHIRT2.webp"
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -49,11 +52,16 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-cmx-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">
-            C
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            <img 
+                src={logo} 
+                alt="CMX Summit" 
+                className="w-full h-auto object-cover"
+                referrerPolicy="no-referrer"
+              />
           </div>
           <span className="font-display font-extrabold text-xl tracking-tighter">
-            CMX <span className="text-cmx-blue">NIGERIA</span>
+            CMX <span className="text-cmx-blue">CONNECT</span>
           </span>
         </div>
 
@@ -461,11 +469,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-cmx-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                C
+              <div className="w-50 h-20  rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                <img 
+                src={logo2} 
+                alt="CMX Summit" 
+                className="w-full h-auto object-cover"
+                referrerPolicy="no-referrer"
+              />
               </div>
               <span className="font-display font-extrabold text-xl tracking-tighter">
-                CMX <span className="text-cmx-blue">NIGERIA</span>
+                {/* CMX <span className="text-cmx-blue">CONNECT</span> */}
               </span>
             </div>
             <p className="text-gray-500 max-w-sm mb-8">
@@ -525,7 +538,7 @@ const TargetAudience = () => {
           <div className="relative">
             <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:block">
               <p className="writing-mode-vertical-rl rotate-180 text-[100px] font-black text-cmx-gray leading-none select-none">
-                AUDIENCE
+                
               </p>
             </div>
             <h2 className="text-4xl md:text-6xl mb-8">Who is this summit <span className="text-cmx-blue italic">designed for?</span></h2>
@@ -562,14 +575,14 @@ const Swags = () => {
   return (
     <section className="py-24 bg-cmx-gray">
       <div className="container-custom">
-        <div className="bg-white rounded-[4rem] p-12 md:p-20 shadow-xl overflow-hidden relative">
+        <div className="bg-cmx-blue rounded-[4rem] p-12 md:p-20 shadow-xl overflow-hidden relative">
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-cmx-orange/10 text-cmx-orange rounded-full text-xs font-bold uppercase mb-6">
+              <div className="inline-block px-4 py-2 bg-cmx-orange text-cmx-gray rounded-full text-xs font-bold uppercase mb-6">
                 Exclusive Perks
               </div>
-              <h2 className="text-4xl md:text-5xl mb-6">Premium Swags & Goodies</h2>
-              <p className="text-lg text-gray-500 mb-8">
+              <h2 className="text-4xl text-cmx-gray md:text-5xl mb-6">Premium Swags & Goodies</h2>
+              <p className="text-lg text-cmx-gray mb-8">
                 Every attendee gets a curated CMX Nigeria gift box featuring exclusive merchandise, partner discounts, and more.
               </p>
               <div className="flex gap-4">
@@ -577,24 +590,24 @@ const Swags = () => {
                   <div className="w-16 h-16 bg-cmx-gray rounded-2xl flex items-center justify-center mb-2 mx-auto">
                     <Zap className="text-cmx-blue" />
                   </div>
-                  <p className="text-xs font-bold">T-Shirts</p>
+                  <p className="text-cmx-gray text-xs font-bold">T-Shirts</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-cmx-gray rounded-2xl flex items-center justify-center mb-2 mx-auto">
                     <Globe className="text-cmx-blue" />
                   </div>
-                  <p className="text-xs font-bold">Notebooks</p>
+                  <p className="text-cmx-gray text-xs font-bold">Notebooks</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-cmx-gray rounded-2xl flex items-center justify-center mb-2 mx-auto">
                     <Rocket className="text-cmx-blue" />
                   </div>
-                  <p className="text-xs font-bold">Stickers</p>
+                  <p className="text-cmx-gray text-xs font-bold">Stickers</p>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <img src="https://picsum.photos/seed/swag/600/600" className="rounded-3xl shadow-lg" referrerPolicy="no-referrer" />
+              <img src={shirt} className="rounded-3xl shadow-lg" referrerPolicy="no-referrer" />
               <div className="absolute top-4 right-4 bg-cmx-blue text-white px-4 py-2 rounded-full text-xs font-bold">
                 Limited Edition
               </div>
