@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  
+  --color-cmx-blue: #0056D2;
+  --color-cmx-orange: #FF6B00;
+  --color-cmx-gray: #F5F5F7;
+  --color-cmx-dark: #1A1A1A;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-cmx-dark bg-white antialiased selection:bg-cmx-blue selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-12;
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+  
+  .btn-primary {
+    @apply bg-cmx-blue text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-cmx-blue text-cmx-blue px-8 py-4 rounded-full font-semibold transition-all hover:bg-cmx-blue hover:text-white active:scale-95;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cmx-gray;
+}
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  
+  .writing-mode-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
